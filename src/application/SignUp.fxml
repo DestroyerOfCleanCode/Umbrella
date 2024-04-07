@@ -18,12 +18,12 @@
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
-            <VBox prefHeight="27.0" prefWidth="599.0" BorderPane.alignment="CENTER">
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="27.0" BorderPane.alignment="TOP_LEFT">
                <BorderPane.margin>
                   <Insets left="30.0" top="30.0" />
                </BorderPane.margin>
                <children>
-                  <VBox fx:id="exit_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="27.0">
+                  <VBox fx:id="exit_btn">
                      <children>
                         <SVGPath content="M25.27,21.73c0.98,0.98,0.98,2.56,0,3.54C24.78,25.75,24.14,26,23.5,26s-1.28-0.24-1.77-0.73L13,16.53l-8.73,8.73 C3.78,25.75,3.14,26,2.5,26s-1.28-0.24-1.77-0.73c-0.98-0.98-0.98-2.56,0-3.54L9.46,13L0.73,4.27c-0.98-0.98-0.98-2.56,0-3.54 c0.98-0.98,2.56-0.98,3.54,0L13,9.46l8.73-8.73c0.98-0.98,2.56-0.98,3.54,0c0.98,0.98,0.98,2.56,0,3.54L16.53,13L25.27,21.73zM25.27,21.73c0.98,0.98,0.98,2.56,0,3.54C24.78,25.75,24.14,26,23.5,26s-1.28-0.24-1.77-0.73L13,16.53l-8.73,8.73 C3.78,25.75,3.14,26,2.5,26s-1.28-0.24-1.77-0.73c-0.98-0.98-0.98-2.56,0-3.54L9.46,13L0.73,4.27c-0.98-0.98-0.98-2.56,0-3.54 c0.98-0.98,2.56-0.98,3.54,0L13,9.46l8.73-8.73c0.98-0.98,2.56-0.98,3.54,0c0.98,0.98,0.98,2.56,0,3.54L16.53,13L25.27,21.73z" fill="WHITE" onMouseClicked="#exit" />
                      </children>
@@ -45,14 +45,9 @@
       </BorderPane>
       <VBox alignment="CENTER" spacing="60.0" style="-fx-background-color: white; -fx-background-radius: 24;">
          <children>
-            <VBox>
+            <VBox alignment="TOP_CENTER">
                <children>
-                  <Text fill="#0d74ca" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello." wrappingWidth="103.78594970703125">
-                     <font>
-                        <Font name="SF Pro Rounded Semibold" size="38.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back" wrappingWidth="256.772705078125">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Get Started" wrappingWidth="276.772705078125">
                      <font>
                         <Font name="SF Pro Rounded Semibold" size="38.0" />
                      </font>
@@ -62,20 +57,32 @@
                   <Insets />
                </VBox.margin>
             </VBox>
-            <VBox spacing="40.0">
+            <VBox spacing="15.0">
                <children>
-                  <TextField fx:id="username_field" prefHeight="45.0" promptText="Username" />
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="username_field1" prefHeight="45.0" prefWidth="206.0" promptText="First Name">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="username_field2" prefHeight="45.0" prefWidth="206.0" promptText="Last Name" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="username_field" prefHeight="45.0" promptText="Date of Birth" />
+                  <TextField fx:id="username_field3" prefHeight="45.0" promptText="Username" />
                   <PasswordField fx:id="password_field" prefHeight="45.0" promptText="Password" />
+                  <PasswordField fx:id="password_field1" prefHeight="45.0" promptText="Confirm Password" />
                </children>
             </VBox>
             <HBox spacing="61.0">
                <children>
-                  <Button fx:id="login_btn" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: #0d74ca; -fx-background-radius: 12px;" text="Login" textFill="WHITE">
+                  <Button fx:id="login_btn" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: #0d74ca; -fx-background-radius: 12px;" text="Create Account" textFill="WHITE">
                      <font>
                         <Font name="SF Pro Rounded Medium" size="15.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: white; -fx-border-color: #0d74ca; -fx-border-radius: 12px; -fx-border-width: 2px;" text="Sign up" textFill="#0d74ca">
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: white; -fx-border-color: #0d74ca; -fx-border-radius: 12px; -fx-border-width: 2px;" text="Go Back" textFill="#0d74ca">
                      <font>
                         <Font name="SF Pro Rounded Regular" size="15.0" />
                      </font>
