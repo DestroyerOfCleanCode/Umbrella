@@ -176,7 +176,7 @@
                                        <children>
                                           <ScrollPane prefHeight="431.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="1190.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #d2d2d4;">
                                                    <children>
                                                       <VBox layoutX="-2.0" prefHeight="530.0" prefWidth="1192.0" spacing="5.0">
                                                          <children>
@@ -331,7 +331,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField prefHeight="31.0" prefWidth="235.0">
+                                                                  <TextField prefHeight="31.0" prefWidth="235.0" styleClass="text_field">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
