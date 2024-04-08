@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -24,10 +26,11 @@ public class LoginController {
     }
 
     @FXML
-    private void login() {
-        String username = username_field.getText();
-        String password = password_field.getText();
-
-        error_msg.setText("Username: " + username + " Password: " + password);
+    private void login() throws IOException {
+//        String username = username_field.getText();
+//        String password = password_field.getText();
+//
+//        error_msg.setText("Username: " + username + " Password: " + password);
+    	Main.setRoot("SignUp");
     }
 }
