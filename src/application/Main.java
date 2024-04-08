@@ -19,7 +19,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			HBox root = (HBox) FXMLLoader.load(getClass().getResource("Login.fxml"));
+			HBox root = (HBox) FXMLLoader.load(getClass().getResource("fxml/Login.fxml"));
 			scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 			
@@ -55,7 +55,7 @@ public class Main extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("fxml/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
