@@ -40,6 +40,12 @@
                             </image>
                         </ImageView>
                     </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
                 </VBox>
             </bottom>
         </BorderPane>
@@ -69,7 +75,7 @@
                                 <TextField fx:id="lastname_field" prefHeight="45.0" prefWidth="206.0" promptText="Last Name" styleClass="text_field" />
                             </children>
                         </HBox>
-                  <DatePicker fx:id="dob_field" prefHeight="46.0" prefWidth="413.6" promptText="Date of Birth" styleClass="date_picker" />
+                  <DatePicker fx:id="dob_field" prefHeight="46.0" prefWidth="419.2" promptText="Date of Birth" styleClass="date_picker" />
                         <TextField fx:id="username_field" prefHeight="45.0" promptText="Username" styleClass="text_field" />
                         <PasswordField fx:id="password_field" prefHeight="45.0" promptText="Password" styleClass="text_field" />
                         <PasswordField fx:id="confirmpassword_field" prefHeight="45.0" promptText="Confirm Password" styleClass="text_field" />
@@ -106,7 +112,7 @@
                 <Insets bottom="20.0" left="60.0" right="60.0" top="20.0" />
             </padding>
             <HBox.margin>
-                <Insets bottom="20.0" left="60.0" right="20.0" top="20.0" />
+                <Insets bottom="20.0" left="40.0" right="20.0" top="20.0" />
             </HBox.margin>
         </VBox>
     </children>
