@@ -108,11 +108,7 @@
                                           </HBox>
                                           <ScrollPane prefHeight="600.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                             <content>
-                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="423.0" prefWidth="1190.0">
-                                                   <children>
-                                                      <ScrollBar layoutX="1169.0" layoutY="6.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="14.0" />
-                                                   </children>
-                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="423.0" prefWidth="1190.0" />
                                             </content>
                                           </ScrollPane>
                                        </children>
