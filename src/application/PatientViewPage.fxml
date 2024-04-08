@@ -405,7 +405,7 @@
                                                 </TextField>
                                                 <HBox alignment="CENTER_RIGHT" prefHeight="63.0" prefWidth="179.0">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" prefWidth="134.0" style="-fx-background-color: #d7d7d9; -fx-background-radius: 16px; -fx-border-radius: 16px;">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" prefWidth="134.0" style="-fx-background-color: #1771ff; -fx-background-radius: 8px; -fx-border-radius: 8px;">
                                                          <children>
                                                             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Send Message">
                                                                <HBox.margin>
