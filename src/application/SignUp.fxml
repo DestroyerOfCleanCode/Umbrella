@@ -97,7 +97,7 @@
                                 <Font name="SF Pro Rounded Medium" size="15.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Go Back">
+                        <Button mnemonicParsing="false" onAction="#goBack" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Go Back">
                             <font>
                                 <Font name="SF Pro Rounded Regular" size="15.0" />
                             </font>

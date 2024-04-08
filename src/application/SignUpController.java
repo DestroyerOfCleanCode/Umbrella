@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
@@ -26,6 +28,11 @@ public class SignUpController {
     @FXML
     private void exit() {
         Helper.exit();
+    }
+    
+    @FXML
+    private void goBack() throws IOException {
+        Main.setRoot("Login");
     }
 
 }

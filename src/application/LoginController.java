@@ -27,10 +27,14 @@ public class LoginController {
 
     @FXML
     private void login() throws IOException {
-//        String username = username_field.getText();
-//        String password = password_field.getText();
-//
-//        error_msg.setText("Username: " + username + " Password: " + password);
+        String username = username_field.getText();
+        String password = password_field.getText();
+
+        error_msg.setText("Username: " + username + " Password: " + password);
+    }
+    
+    @FXML
+    private void signup() throws IOException {
     	Main.setRoot("SignUp");
     }
 }
