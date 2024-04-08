@@ -6,6 +6,7 @@
     -fx-background-radius: 12px;
     -fx-background-color: #0d74ca;
     -fx-text-fill: #ffffff;
+    -fx-cursor: HAND;
 }
 
 .border_btn {
@@ -14,6 +15,7 @@
     -fx-border-width: 2px;
     -fx-background-color: white;
     -fx-text-fill: #0d74ca;
+    -fx-cursor: HAND;
 }
 
 .date_picker {
@@ -28,8 +30,27 @@
     -fx-cursor: HAND;
 }
 
+.date_picker .left-button:hover,
+.date_picker .right-button:hover {
+    -fx-background-color: transparent;
+}
+
+.date_picker .left-button:focused,
+.date_picker .right-button:focused {
+    -fx-background-color: transparent;
+}
+
 .date_picker .date-picker-popup .spinner .button .left-arrow,
 .date_picker .date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: #4f4f51;
+}
+
+.date_picker .date-picker-popup .spinner .button .left-arrow:hover,
+.date_picker .date-picker-popup .spinner .button .right-arrow:hover {
+    -fx-background-color: black;
+}
+
+.date_picker .arrow {
     -fx-background-color: #4f4f51;
 }
 
