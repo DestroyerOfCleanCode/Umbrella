@@ -39,11 +39,11 @@
                         <Insets left="30.0" top="30.0" />
                     </BorderPane.margin>
                     <children>
-                  <HBox fx:id="exit_btn" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#exit">
-                     <children>
+                        <HBox fx:id="exit_btn" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#exit">
+                            <children>
                                 <SVGPath content="M25.27,21.73c0.98,0.98,0.98,2.56,0,3.54C24.78,25.75,24.14,26,23.5,26s-1.28-0.24-1.77-0.73L13,16.53l-8.73,8.73 C3.78,25.75,3.14,26,2.5,26s-1.28-0.24-1.77-0.73c-0.98-0.98-0.98-2.56,0-3.54L9.46,13L0.73,4.27c-0.98-0.98-0.98-2.56,0-3.54 c0.98-0.98,2.56-0.98,3.54,0L13,9.46l8.73-8.73c0.98-0.98,2.56-0.98,3.54,0c0.98,0.98,0.98,2.56,0,3.54L16.53,13L25.27,21.73zM25.27,21.73c0.98,0.98,0.98,2.56,0,3.54C24.78,25.75,24.14,26,23.5,26s-1.28-0.24-1.77-0.73L13,16.53l-8.73,8.73 C3.78,25.75,3.14,26,2.5,26s-1.28-0.24-1.77-0.73c-0.98-0.98-0.98-2.56,0-3.54L9.46,13L0.73,4.27c-0.98-0.98-0.98-2.56,0-3.54 c0.98-0.98,2.56-0.98,3.54,0L13,9.46l8.73-8.73c0.98-0.98,2.56-0.98,3.54,0c0.98,0.98,0.98,2.56,0,3.54L16.53,13L25.27,21.73z" fill="WHITE" />
-                     </children>
-                  </HBox>
+                            </children>
+                        </HBox>
                     </children>
                 </VBox>
             </top>
@@ -87,12 +87,12 @@
                 </HBox>
                 <HBox spacing="60.0">
                     <children>
-                        <Button fx:id="login_btn" defaultButton="true" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="180.0" styleClass="fill_btn" text="Login">
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="180.0" styleClass="fill_btn" text="Login">
                             <font>
                                 <Font name="SF Pro Rounded Medium" size="15.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#signup" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Sign up">
+                        <Button mnemonicParsing="false" onAction="#signUp" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Sign up">
                             <font>
                                 <Font name="SF Pro Rounded Regular" size="15.0" />
                             </font>

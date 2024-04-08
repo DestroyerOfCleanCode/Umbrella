@@ -67,18 +67,18 @@
                     <children>
                         <HBox prefWidth="200.0">
                             <children>
-                                <TextField fx:id="firstname_field" prefHeight="45.0" prefWidth="206.0" promptText="First Name" styleClass="text_field">
+                                <TextField fx:id="firstName_field" prefHeight="45.0" prefWidth="206.0" promptText="First Name" styleClass="text_field">
                                     <HBox.margin>
                                         <Insets right="20.0" />
                                     </HBox.margin>
                                 </TextField>
-                                <TextField fx:id="lastname_field" prefHeight="45.0" prefWidth="206.0" promptText="Last Name" styleClass="text_field" />
+                                <TextField fx:id="lastName_field" prefHeight="45.0" prefWidth="206.0" promptText="Last Name" styleClass="text_field" />
                             </children>
                         </HBox>
                   <DatePicker fx:id="dob_field" prefHeight="46.0" prefWidth="419.2" promptText="Date of Birth" styleClass="date_picker" />
                         <TextField fx:id="username_field" prefHeight="45.0" promptText="Username" styleClass="text_field" />
                         <PasswordField fx:id="password_field" prefHeight="45.0" promptText="Password" styleClass="text_field" />
-                        <PasswordField fx:id="confirmpassword_field" prefHeight="45.0" promptText="Confirm Password" styleClass="text_field" />
+                        <PasswordField fx:id="confirmPassword_field" prefHeight="45.0" promptText="Confirm Password" styleClass="text_field" />
                     </children>
                 </VBox>
             <HBox alignment="CENTER_LEFT">
@@ -92,12 +92,12 @@
             </HBox>
                 <HBox alignment="CENTER" prefHeight="45.6" prefWidth="413.6" spacing="60.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="180.0" styleClass="fill_btn" text="Create Account">
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#signUp" prefHeight="45.0" prefWidth="180.0" styleClass="fill_btn" text="Create Account">
                             <font>
                                 <Font name="SF Pro Rounded Medium" size="15.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#goBack" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Go Back">
+                        <Button mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Go Back">
                             <font>
                                 <Font name="SF Pro Rounded Regular" size="15.0" />
                             </font>
