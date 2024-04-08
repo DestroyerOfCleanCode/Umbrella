@@ -2,14 +2,103 @@
     -fx-cursor: HAND;
 }
 
-#username_field,
-#password_field {
-    /* -fx-font-family: "Poppins"; */
+.fill_btn {
+    -fx-background-radius: 12px;
+    -fx-background-color: #0d74ca;
+    -fx-text-fill: #ffffff;
+}
+
+.border_btn {
+    -fx-border-radius: 12px;
+    -fx-border-color: #0d74ca;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+    -fx-text-fill: #0d74ca;
+}
+
+.date-picker {
+    -fx-background-color: #f3f4fa;
+    -fx-border-color: transparent;
+    -fx-background-radius: 12px;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6px;
+    -fx-cursor: HAND;
+}
+
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: #4f4f51;
+}
+
+.date-picker-popup {
+    -fx-background-radius: 10px;
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-radius: 10px 10px 0px 0px;
+    -fx-background-color: #d3d8db;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #4f4f51;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .calendar-grid {
+    -fx-background-color: white;
+    -fx-background-radius: 0px 0px 10px 10px;
+}
+
+.date-picker .day-cell.next-month,
+.date-picker .day-cell.previous-month {
+    -fx-text-fill: #97979c;
+}
+
+.date-picker .day-cell {
+    -fx-text-fill: #4f4f51;
+}
+
+.date-picker .day-cell.today {
+    -fx-text-fill: #f80759;
+}
+
+.date-picker .day-cell.selected {
+    -fx-text-fill: white;
+}
+
+.date-picker .cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.date-picker .day-cell:hover {
+    -fx-border-color: #f80759;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.date-picker .date-cell.selected {
+    -fx-background-color: #f80759;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #ffffff;
+}
+
+.date-picker > .arrow-button:hover {
+    -fx-background-color: #d3d8db;
+}
+
+.date-picker > .text-field {
+    -fx-background-color: transparent;
+}
+
+.text-field {
     -fx-font-size: 16px;
     -fx-background-color: #f3f4fa;
     -fx-border-color: transparent;
-    -fx-border-width: 1.5px;
     -fx-background-radius: 12px;
     -fx-text-fill: #4f4f51;
-    -fx-cursor: HAND;
 }
