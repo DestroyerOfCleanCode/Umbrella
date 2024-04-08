@@ -72,8 +72,8 @@
                 </VBox>
                 <VBox spacing="40.0">
                     <children>
-                        <TextField fx:id="username_field" prefHeight="45.0" promptText="Username" />
-                        <PasswordField fx:id="password_field" prefHeight="45.0" promptText="Password" />
+                        <TextField fx:id="username_field" prefHeight="45.0" promptText="Username" styleClass="text_field" />
+                        <PasswordField fx:id="password_field" prefHeight="45.0" promptText="Password" styleClass="text_field" />
                     </children>
                 </VBox>
                 <HBox alignment="CENTER_LEFT">
