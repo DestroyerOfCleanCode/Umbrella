@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -10,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(26, 65, 183, 1) 0%, rgba(0, 169, 223, 1) 74%); -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(26, 65, 183, 1) 0%, rgba(0, 169, 223, 1) 74%); -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OfficeMessagingController">
    <children>
       <VBox>
          <children>
@@ -49,7 +51,7 @@
                      <right>
                         <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                            <children>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #d7d7d9; -fx-background-radius: 16px; -fx-border-radius: 16px;">
+                              <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#logout" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #d7d7d9; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
                                        <HBox.margin>
@@ -69,7 +71,7 @@
                            <children>
                               <HBox alignment="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #adc7f0; -fx-background-radius: 16px; -fx-border-radius: 16px;">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hello DOCTOR NAME">
+                                    <Text fx:id="greeting" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello DOCTOR NAME">
                                        <HBox.margin>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                        </HBox.margin>
@@ -109,7 +111,7 @@
                                  <right>
                                     <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #6ea6ff; -fx-background-radius: 16px; -fx-border-radius: 16px;">
+                                          <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#back" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #6ea6ff; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Back">
                                                    <HBox.margin>
@@ -177,7 +179,22 @@
                               </HBox>
                            </center>
                         </BorderPane>
-                        <Line endX="921.2929077148438" endY="-0.41421353816986084" startX="2137.5859375" startY="2.3434691429138184" />
+                        <Line endX="1150.0">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin></Line>
+                        <ScrollPane prefHeight="410.0" prefWidth="1214.0" style="-fx-border-color: white;">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1190.0">
+                                 <children>
+                                    <VBox fx:id="messageVBox" prefWidth="1176.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </ScrollPane>
                      </children>
                   </VBox>
                </children>
