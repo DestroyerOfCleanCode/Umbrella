@@ -50,6 +50,8 @@ public class SignUpController {
             error_msg.setText("Passwords do not match");
             return;
         }
+        
+        
     }
 
     @FXML

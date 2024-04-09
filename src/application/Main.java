@@ -15,6 +15,7 @@ public class Main extends Application {
 	
     private static Scene scene;
     private static double xOffset, yOffset;
+    public static int id;
 	
 	@Override
 	public void start(Stage stage) {
@@ -62,4 +63,5 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
 }
