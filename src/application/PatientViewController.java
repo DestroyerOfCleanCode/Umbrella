@@ -42,10 +42,11 @@ public class PatientViewController {
 	@FXML
 	private TextField messageField;
 	
-	@FXML
+    @FXML
     private void logout() throws IOException {
-        Main.setRoot("Login");
-        Main.id = 0;
+        System.out.print("logout pressed");
+    	Main.id = 0;
+    	Main.setRoot("Login");
     }
 	
 	@FXML
