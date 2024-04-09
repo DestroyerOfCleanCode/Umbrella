@@ -331,7 +331,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField prefHeight="31.0" prefWidth="235.0" styleClass="text_field">
+                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="235.0" styleClass="text_field">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -346,7 +346,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField prefHeight="31.0" prefWidth="650.0">
+                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -361,7 +361,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField prefHeight="31.0" prefWidth="650.0">
+                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -384,7 +384,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField prefHeight="31.0" prefWidth="235.0">
+                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="235.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -407,7 +407,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField prefHeight="31.0" prefWidth="650.0">
+                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -422,7 +422,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField prefHeight="31.0" prefWidth="235.0">
+                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="235.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
