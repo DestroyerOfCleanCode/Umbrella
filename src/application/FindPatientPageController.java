@@ -42,7 +42,7 @@ public class FindPatientPageController {
         	Main.setRoot("ExistingPatientsPage");
         }
         else {
-        	error_msg.setText("Passwords do not match");
+        	error_msg.setText("Patient Not Found!");
         }
     }
     
