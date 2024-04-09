@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
@@ -23,27 +24,17 @@ public class AppointmentController {
 	@FXML
 	private TextField bpLoField;
 	@FXML
-	private TextField allergiesField;
+	private TextArea allergiesField;
 	@FXML
-	private TextField healthConcernsField;
+	private TextArea healthConcernsField;
 	
 	@FXML
-	private TextField eyesField;
-	@FXML
-	private TextField throatField;
-	@FXML
-	private TextField stomachField;
-	@FXML
-	private TextField earsField;
-	@FXML
-	private TextField heartField;
-	@FXML
-	private TextField lungsField;
+	private TextArea physicalResultsField;
 	
 	@FXML
-	private TextField concernsField;
+	private TextArea doctorConcernsField;
 	@FXML
-	private TextField prescriptionsField;
+	private TextArea prescriptionsField;
 	
 	@FXML
     private void logout() throws IOException {
@@ -60,17 +51,11 @@ public class AppointmentController {
 		String bpLo = bpLoField.getText();
 		String allergies = allergiesField.getText();
 		String healthConcerns = healthConcernsField.getText();
-		String eyes = eyesField.getText();
-		String throat = throatField.getText();
-		String ears = earsField.getText();
-		String heart = heartField.getText();
-		String lungs = lungsField.getText();
-		String stomach = stomachField.getText();
-		String concerns = concernsField.getText();
+		String eyes = physicalResultsField.getText();
+		String doctorConcerns = doctorConcernsField.getText();
 		String prescriptions = prescriptionsField.getText();
 		System.out.println(height + ", " + weight + ", " + bodyTemp + ", " + bpHi + ", " + bpLo + ", " +
-				 allergies + ", " + healthConcerns + ", " + eyes + ", " + throat + ", " + ears + ", " + heart + ", " +
-				 lungs + ", " + stomach + ", " + concerns + ", " + prescriptions);
+				 allergies + ", " + healthConcerns + ", " + eyes + ", " + doctorConcerns + ", " + prescriptions);
         Main.setRoot("ExistingPatientsPage");
     }
 	
@@ -83,17 +68,11 @@ public class AppointmentController {
 		String bpLo = bpLoField.getText();
 		String allergies = allergiesField.getText();
 		String healthConcerns = healthConcernsField.getText();
-		String eyes = eyesField.getText();
-		String throat = throatField.getText();
-		String ears = earsField.getText();
-		String heart = heartField.getText();
-		String lungs = lungsField.getText();
-		String stomach = stomachField.getText();
-		String concerns = concernsField.getText();
+		String eyes = physicalResultsField.getText();
+		String doctorConcerns = doctorConcernsField.getText();
 		String prescriptions = prescriptionsField.getText();
 		System.out.println(height + ", " + weight + ", " + bodyTemp + ", " + bpHi + ", " + bpLo + ", " +
-				 allergies + ", " + healthConcerns + ", " + eyes + ", " + throat + ", " + ears + ", " + heart + ", " +
-				 lungs + ", " + stomach + ", " + concerns + ", " + prescriptions);
+				 allergies + ", " + healthConcerns + ", " + eyes + ", " + doctorConcerns + ", " + prescriptions);
         Main.setRoot("ExistingPatientsPage");
     }
 }

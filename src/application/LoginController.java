@@ -22,7 +22,7 @@ public class LoginController {
     }
 
     @FXML
-    private void login() {
+    private void login() throws IOException {
         String username = username_field.getText();
         String password = password_field.getText();
 
@@ -33,6 +33,11 @@ public class LoginController {
 
         if (Helper.BCryptAuth(password, Helper.BCryptHash("123"))) {
             error_msg.setText("Login successful");
+            
+            if (username.equalsIgnoreCase("patient"))
+            	Main.setRoot("PatientView");
+            if (username.equalsIgnoreCase("doctor") || username.equalsIgnoreCase("nurse"))
+            	Main.setRoot("OfficeMenuPage");
         }
     }
 

@@ -20,7 +20,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			HBox root = (HBox) FXMLLoader.load(getClass().getResource("fxml/AppointmentPage.fxml"));
+			HBox root = (HBox) FXMLLoader.load(getClass().getResource("fxml/Login.fxml"));
 			scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 			

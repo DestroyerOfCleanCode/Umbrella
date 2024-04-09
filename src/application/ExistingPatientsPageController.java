@@ -81,4 +81,20 @@ public class ExistingPatientsPageController {
     	Main.setRoot("AppointmentPage");
     }
     
+    private void addMessage(String string) throws IOException {
+    	TextField message = new TextField(string);
+    	MessageBox.getChildren().add(message);
+    }
+    
+    private void setGreeting(String string) {
+    	greeting.setText(string);
+    }
+    
+    private void setPatientName(String string) {
+    	patientName.setText(string);
+    }
+    
+    
+    
+    
 }
