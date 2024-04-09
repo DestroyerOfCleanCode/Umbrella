@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(26, 65, 183, 1) 0%, rgba(0, 169, 223, 1) 74%); -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(26, 65, 183, 1) 0%, rgba(0, 169, 223, 1) 74%); -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ExistingPatientsPageController">
    <children>
       <VBox>
          <children>
@@ -23,7 +23,7 @@
                <children>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/logo.png" />
+                        <Image url="@fxml/images/logo.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -54,7 +54,7 @@
                      <right>
                         <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                            <children>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #d7d7d9; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
+                              <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#logout" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #d7d7d9; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
                                        <HBox.margin>
@@ -74,7 +74,7 @@
                            <children>
                               <HBox alignment="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #adc7f0; -fx-background-radius: 16px; -fx-border-radius: 16px;">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Doctor NAME">
+                                    <Text fx:id="greeting" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello Doctor NAME">
                                        <HBox.margin>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                        </HBox.margin>
@@ -115,7 +115,7 @@
                                     <Font size="21.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PATIENT NAME">
+                              <Text fx:id="patientName" strokeType="OUTSIDE" strokeWidth="0.0" text="PATIENT NAME">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
@@ -132,7 +132,7 @@
                      <center>
                         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                            <children>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="42.0" prefWidth="217.0" style="-fx-background-color: indigo; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: HAND;">
+                              <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#appointment" prefHeight="42.0" prefWidth="217.0" style="-fx-background-color: indigo; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: HAND;">
                                  <children>
                                     <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment">
                                        <HBox.margin>
@@ -150,7 +150,7 @@
                      <right>
                         <HBox alignment="BOTTOM_CENTER" prefHeight="56.0" prefWidth="290.0" BorderPane.alignment="CENTER">
                            <children>
-                              <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: blue; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: HAND;">
+                              <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#goback" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: blue; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: HAND;">
                                  <children>
                                     <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Go Back">
                                        <HBox.margin>
@@ -198,7 +198,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="226.0">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FIRSTNAME">
+                                                                        <Text fx:id="firstname" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRSTNAME">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>
@@ -215,7 +215,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="129.0">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="M">
+                                                                        <Text fx:id="sex" strokeType="OUTSIDE" strokeWidth="0.0" text="M">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>
@@ -229,7 +229,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="129.0">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="70">
+                                                                        <Text fx:id="weight" strokeType="OUTSIDE" strokeWidth="0.0" text="70">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>
@@ -248,7 +248,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="226.0">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LASTNAME">
+                                                                        <Text fx:id="lastname" strokeType="OUTSIDE" strokeWidth="0.0" text="LASTNAME">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>
@@ -265,7 +265,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="129.0">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="120/70">
+                                                                        <Text fx:id="bloodpressure" strokeType="OUTSIDE" strokeWidth="0.0" text="120/70">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>
@@ -279,7 +279,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="129.0">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4' 5&quot;">
+                                                                        <Text fx:id="height" strokeType="OUTSIDE" strokeWidth="0.0" text="4' 5&quot;">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>
@@ -298,7 +298,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="226.0">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Month Day, Year">
+                                                                        <Text fx:id="dob" strokeType="OUTSIDE" strokeWidth="0.0" text="Month Day, Year">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>
@@ -331,7 +331,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="235.0" styleClass="text_field">
+                                                                  <TextField fx:id="phonenumber" editable="false" prefHeight="31.0" prefWidth="235.0" styleClass="text_field">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -346,7 +346,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="650.0">
+                                                                  <TextField fx:id="email" editable="false" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -361,7 +361,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="650.0">
+                                                                  <TextField fx:id="address" editable="false" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -384,7 +384,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="235.0">
+                                                                  <TextField fx:id="insurancenumber" editable="false" prefHeight="31.0" prefWidth="235.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -407,7 +407,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="650.0">
+                                                                  <TextField fx:id="pharmaddress" editable="false" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -422,7 +422,7 @@
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField editable="false" prefHeight="31.0" prefWidth="235.0">
+                                                                  <TextField fx:id="pharmnumber" editable="false" prefHeight="31.0" prefWidth="235.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -468,7 +468,10 @@
                                           </HBox>
                                           <ScrollPane prefHeight="399.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="1190.0" />
+                                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                   <children>
+                                                      <VBox fx:id="healthHistoryBox" layoutX="1.0" prefWidth="1176.0" />
+                                                   </children></AnchorPane>
                                              </content>
                                           </ScrollPane>
                                        </children>
@@ -500,7 +503,10 @@
                                           </HBox>
                                           <ScrollPane prefHeight="399.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="1190.0" />
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1190.0">
+                                                   <children>
+                                                      <VBox fx:id="immunizationsBox" prefWidth="1176.0" />
+                                                   </children></AnchorPane>
                                              </content>
                                           </ScrollPane>
                                        </children>
@@ -532,7 +538,10 @@
                                           </HBox>
                                           <ScrollPane prefHeight="399.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="1190.0" />
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1190.0">
+                                                   <children>
+                                                      <VBox fx:id="pastAppointmentsBox" prefWidth="1176.0" />
+                                                   </children></AnchorPane>
                                              </content>
                                           </ScrollPane>
                                        </children>
@@ -564,12 +573,15 @@
                                           </HBox>
                                           <ScrollPane prefHeight="325.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="315.0" prefWidth="1190.0" />
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1190.0">
+                                                   <children>
+                                                      <VBox fx:id="MessageBox" prefWidth="1176.0" />
+                                                   </children></AnchorPane>
                                              </content>
                                           </ScrollPane>
                                           <HBox>
                                              <children>
-                                                <TextField prefHeight="53.0" prefWidth="1010.0">
+                                                <TextField fx:id="messageField" prefHeight="53.0" prefWidth="1010.0">
                                                    <font>
                                                       <Font size="19.0" />
                                                    </font>
