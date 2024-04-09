@@ -70,7 +70,7 @@ public class ExistingPatientsPageController {
     }
     
     @FXML
-    private void message() throws IOException {
+    private void sendMessage() throws IOException {
     	String message = messageField.getText();
     	System.out.print(message);
     }
@@ -78,6 +78,7 @@ public class ExistingPatientsPageController {
     @FXML
     private void appointment() throws IOException {
     	System.out.print("appointment button pressed");
+    	Main.setRoot("AppointmentPage");
     }
     
 }
