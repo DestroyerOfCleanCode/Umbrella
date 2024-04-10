@@ -14,9 +14,6 @@ public class PatientViewController {
 	private Text greeting;
 
 	@FXML
-	private VBox pastAppointmentsBox;
-
-	@FXML
 	private TextField phoneNumberField;
 	@FXML
 	private TextField emailField;
@@ -33,6 +30,9 @@ public class PatientViewController {
 
 	@FXML
 	private TextArea immunizations;
+
+	@FXML
+	private TextArea pastAppointments;
 
 	@FXML
 	private VBox MessageBox;
@@ -53,7 +53,7 @@ public class PatientViewController {
 		populatePatientData();
 	}
 
-	private void populatePatientData() {
+	private void populatePatientData() throws SQLException {
 		greeting.setText("Hello " + patient.getFirstName());
 		phoneNumberField.setText(patient.getPhoneNumber() == null ? "" : patient.getPhoneNumber());
 		emailField.setText(patient.getEmail() == null ? "" : patient.getEmail());
@@ -62,6 +62,7 @@ public class PatientViewController {
 		pharmAddressField.setText(patient.getPharmacyAddress() == null ? "" : patient.getPharmacyAddress());
 		pharmNumberField.setText(patient.getPharmacyPhoneNumber() == null ? "" : patient.getPharmacyPhoneNumber());
 		immunizations.setText(patient.getImmunization() == null ? "" : patient.getImmunization());
+		pastAppointments.setText(Helper.appointmentsAsString(patient.getId()));
 	}
 
 	@FXML
@@ -71,7 +72,7 @@ public class PatientViewController {
 	}
 
 	@FXML
-	private void saveAdditionalInformation() throws IOException {
+	private void saveAdditionalInformation() throws IOException, SQLException {
 		String phoneNumber = phoneNumberField.getText();
 		String email = emailField.getText();
 		String address = addressField.getText();
@@ -112,7 +113,7 @@ public class PatientViewController {
 	}
 
 	@FXML
-	private void updateImmunization() throws IOException {
+	private void updateImmunization() throws IOException, SQLException {
 		String imm = immunizations.getText();
 		patient.setImmunization(imm);
 

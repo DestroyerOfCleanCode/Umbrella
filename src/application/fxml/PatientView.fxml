@@ -15,17 +15,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox prefHeight="720.0" prefWidth="1280.0"
-   style="-fx-background-color: linear-gradient(to bottom right, rgba(26, 65, 183, 1) 0%, rgba(0, 169, 223, 1) 74%); -fx-background-radius: 32px; -fx-border-radius: 32px;"
-   xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-   fx:controller="application.PatientViewController">
+<HBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(26, 65, 183, 1) 0%, rgba(0, 169, 223, 1) 74%); -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PatientViewController">
    <children>
       <VBox>
          <children>
             <HBox alignment="CENTER_RIGHT" spacing="10.0">
                <children>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
-                     preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/logo.png" />
                      </image>
@@ -46,8 +42,7 @@
                   <Insets right="25.0" top="10.0" />
                </VBox.margin>
             </HBox>
-            <VBox alignment="TOP_CENTER" prefHeight="674.0" prefWidth="1260.0" spacing="20.0"
-               style="-fx-background-color: white; -fx-background-radius: 24;">
+            <VBox alignment="TOP_CENTER" prefHeight="674.0" prefWidth="1260.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 24;">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
@@ -57,12 +52,9 @@
                <children>
                   <BorderPane prefHeight="95.0" prefWidth="1200.0">
                      <right>
-                        <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="400.0"
-                           BorderPane.alignment="CENTER">
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                            <children>
-                              <HBox alignment="CENTER" maxHeight="-Infinity"
-                                 onMouseClicked="#logout" prefHeight="50.0" prefWidth="134.0"
-                                 styleClass="border_btn">
+                              <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#logout" prefHeight="50.0" prefWidth="134.0" styleClass="border_btn">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
                                        <HBox.margin>
@@ -80,12 +72,9 @@
                      <left>
                         <HBox prefHeight="100.0" prefWidth="400.0" BorderPane.alignment="CENTER">
                            <children>
-                              <HBox alignment="CENTER" maxHeight="50.0" prefHeight="50.0"
-                                 prefWidth="358.0"
-                                 style="-fx-background-color: #adc7f0; -fx-background-radius: 16px; -fx-border-radius: 16px;">
+                              <HBox alignment="CENTER" maxHeight="50.0" prefHeight="50.0" prefWidth="358.0" style="-fx-background-color: #adc7f0; -fx-background-radius: 16px; -fx-border-radius: 16px;">
                                  <children>
-                                    <Text fx:id="greeting" strokeType="OUTSIDE" strokeWidth="0.0"
-                                       text="Hello PATIENT NAME">
+                                    <Text fx:id="greeting" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello PATIENT NAME">
                                        <HBox.margin>
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                        </HBox.margin>
@@ -103,8 +92,7 @@
                            <children>
                               <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0"
-                                       text="Sundevil Health">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sundevil Health">
                                        <font>
                                           <Font name="System Bold" size="34.0" />
                                        </font>
@@ -118,38 +106,26 @@
                         </HBox>
                      </center>
                   </BorderPane>
-                  <TabPane prefHeight="633.0" prefWidth="1220.0" style="-fx-border-color: black;"
-                     tabClosingPolicy="UNAVAILABLE" tabMinHeight="25.0" tabMinWidth="200.0">
+                  <TabPane prefHeight="633.0" prefWidth="1220.0" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="25.0" tabMinWidth="200.0">
                      <tabs>
                         <Tab closable="false" text="Past Visits">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0"
-                                 prefWidth="1198.0">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="1198.0">
                                  <children>
-                                    <VBox alignment="TOP_CENTER" prefHeight="497.0"
-                                       prefWidth="1220.0">
+                                    <VBox alignment="TOP_CENTER" prefHeight="497.0" prefWidth="1220.0">
                                        <children>
-                                          <HBox alignment="TOP_CENTER" prefHeight="201.0"
-                                             prefWidth="377.0">
+                                          <HBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="377.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0"
-                                                   text="Past Appointments">
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Past Appointments">
                                                    <font>
                                                       <Font size="26.0" />
                                                    </font>
                                                 </Text>
                                              </children>
                                           </HBox>
-                                          <ScrollPane prefHeight="600.0" prefWidth="1200.0"
-                                             style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
+                                          <ScrollPane prefHeight="600.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0"
-                                                   prefWidth="1190.0">
-                                                   <children>
-                                                      <VBox fx:id="pastAppointmentsBox"
-                                                         prefWidth="1176.0" />
-                                                   </children>
-                                                </AnchorPane>
+                                                <TextArea fx:id="pastAppointments" prefHeight="431.0" prefWidth="1192.0" />
                                              </content>
                                           </ScrollPane>
                                        </children>
@@ -166,52 +142,38 @@
                         </Tab>
                         <Tab closable="false" text="Additional Information">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                                 prefWidth="200.0">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="TOP_CENTER" prefHeight="497.0"
-                                       prefWidth="1220.0">
+                                    <VBox alignment="TOP_CENTER" prefHeight="497.0" prefWidth="1220.0">
                                        <children>
-                                          <HBox alignment="TOP_CENTER" prefHeight="201.0"
-                                             prefWidth="377.0">
+                                          <HBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="377.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0"
-                                                   text="Additional Information">
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Additional Information">
                                                    <font>
                                                       <Font size="26.0" />
                                                    </font>
                                                 </Text>
                                              </children>
                                           </HBox>
-                                          <ScrollPane prefHeight="600.0" prefWidth="1200.0"
-                                             style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
+                                          <ScrollPane prefHeight="600.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0">
                                                    <children>
-                                                      <VBox prefHeight="406.0" prefWidth="1182.0"
-                                                         spacing="5.0">
+                                                      <VBox prefHeight="406.0" prefWidth="1182.0" spacing="5.0">
                                                          <children>
-                                                            <Text strokeType="OUTSIDE"
-                                                               strokeWidth="0.0"
-                                                               text="Contact Information">
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information">
                                                                <font>
                                                                   <Font size="25.0" />
                                                                </font>
                                                             </Text>
                                                             <HBox>
                                                                <children>
-                                                                  <Text strokeType="OUTSIDE"
-                                                                     strokeWidth="0.0"
-                                                                     text="Phone Number:"
-                                                                     wrappingWidth="186.501953125">
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" wrappingWidth="186.501953125">
                                                                      <font>
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField
-                                                                     fx:id="phoneNumberField"
-                                                                     prefHeight="31.0"
-                                                                     prefWidth="235.0">
+                                                                  <TextField fx:id="phoneNumberField" prefHeight="31.0" prefWidth="235.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -220,17 +182,12 @@
                                                             </HBox>
                                                             <HBox>
                                                                <children>
-                                                                  <Text strokeType="OUTSIDE"
-                                                                     strokeWidth="0.0"
-                                                                     text="Email Address:"
-                                                                     wrappingWidth="186.501953125">
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address:" wrappingWidth="186.501953125">
                                                                      <font>
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField fx:id="emailField"
-                                                                     prefHeight="31.0"
-                                                                     prefWidth="650.0">
+                                                                  <TextField fx:id="emailField" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -239,26 +196,19 @@
                                                             </HBox>
                                                             <HBox>
                                                                <children>
-                                                                  <Text strokeType="OUTSIDE"
-                                                                     strokeWidth="0.0"
-                                                                     text="Address:"
-                                                                     wrappingWidth="186.501953125">
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" wrappingWidth="186.501953125">
                                                                      <font>
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField fx:id="addressField"
-                                                                     prefHeight="31.0"
-                                                                     prefWidth="650.0">
+                                                                  <TextField fx:id="addressField" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
                                                                   </TextField>
                                                                </children>
                                                             </HBox>
-                                                            <Text strokeType="OUTSIDE"
-                                                               strokeWidth="0.0"
-                                                               text="Insurance Information">
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Insurance Information">
                                                                <font>
                                                                   <Font size="25.0" />
                                                                </font>
@@ -268,27 +218,19 @@
                                                             </Text>
                                                             <HBox>
                                                                <children>
-                                                                  <Text strokeType="OUTSIDE"
-                                                                     strokeWidth="0.0"
-                                                                     text="Insurance Number:"
-                                                                     wrappingWidth="186.501953125">
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Insurance Number:" wrappingWidth="186.501953125">
                                                                      <font>
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField
-                                                                     fx:id="insuranceNumberField"
-                                                                     prefHeight="31.0"
-                                                                     prefWidth="235.0">
+                                                                  <TextField fx:id="insuranceNumberField" prefHeight="31.0" prefWidth="235.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
                                                                   </TextField>
                                                                </children>
                                                             </HBox>
-                                                            <Text strokeType="OUTSIDE"
-                                                               strokeWidth="0.0"
-                                                               text="Pharmacy Information">
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy Information">
                                                                <font>
                                                                   <Font size="25.0" />
                                                                </font>
@@ -298,18 +240,12 @@
                                                             </Text>
                                                             <HBox>
                                                                <children>
-                                                                  <Text strokeType="OUTSIDE"
-                                                                     strokeWidth="0.0"
-                                                                     text="Pharmacy Address:"
-                                                                     wrappingWidth="186.501953125">
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy Address:" wrappingWidth="186.501953125">
                                                                      <font>
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField
-                                                                     fx:id="pharmAddressField"
-                                                                     prefHeight="31.0"
-                                                                     prefWidth="650.0">
+                                                                  <TextField fx:id="pharmAddressField" prefHeight="31.0" prefWidth="650.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
@@ -318,40 +254,25 @@
                                                             </HBox>
                                                             <HBox>
                                                                <children>
-                                                                  <Text strokeType="OUTSIDE"
-                                                                     strokeWidth="0.0"
-                                                                     text="Phone Number:"
-                                                                     wrappingWidth="186.501953125">
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" wrappingWidth="186.501953125">
                                                                      <font>
                                                                         <Font size="21.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <TextField
-                                                                     fx:id="pharmNumberField"
-                                                                     prefHeight="31.0"
-                                                                     prefWidth="235.0">
+                                                                  <TextField fx:id="pharmNumberField" prefHeight="31.0" prefWidth="235.0">
                                                                      <font>
                                                                         <Font size="15.0" />
                                                                      </font>
                                                                   </TextField>
                                                                </children>
                                                             </HBox>
-                                                            <HBox alignment="BOTTOM_RIGHT"
-                                                               prefHeight="50.0" prefWidth="400.0">
+                                                            <HBox alignment="BOTTOM_RIGHT" prefHeight="50.0" prefWidth="400.0">
                                                                <children>
-                                                                  <HBox alignment="CENTER"
-                                                                     maxHeight="-Infinity"
-                                                                     onMouseClicked="#saveAdditionalInformation"
-                                                                     prefHeight="50.0"
-                                                                     prefWidth="134.0"
-                                                                     style="-fx-background-color: #1771ff; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
+                                                                  <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#saveAdditionalInformation" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #1771ff; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
                                                                      <children>
-                                                                        <Text strokeType="OUTSIDE"
-                                                                           strokeWidth="0.0"
-                                                                           text="Save">
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Save">
                                                                            <HBox.margin>
-                                                                              <Insets left="10.0"
-                                                                                 right="10.0" />
+                                                                              <Insets left="10.0" right="10.0" />
                                                                            </HBox.margin>
                                                                            <font>
                                                                               <Font size="28.0" />
@@ -366,8 +287,7 @@
                                                             </HBox>
                                                          </children>
                                                          <padding>
-                                                            <Insets bottom="10.0" left="10.0"
-                                                               right="10.0" top="10.0" />
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                                          </padding>
                                                       </VBox>
                                                    </children>
@@ -388,33 +308,23 @@
                         </Tab>
                         <Tab text="Immunization History">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                                 prefWidth="200.0">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="TOP_CENTER" prefHeight="497.0"
-                                       prefWidth="1220.0">
+                                    <VBox alignment="TOP_CENTER" prefHeight="497.0" prefWidth="1220.0">
                                        <children>
-                                          <HBox alignment="TOP_CENTER" prefHeight="201.0"
-                                             prefWidth="377.0">
+                                          <HBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="377.0">
                                              <children>
-                                                <HBox alignment="CENTER_RIGHT" prefHeight="35.0"
-                                                   prefWidth="450.0" />
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0"
-                                                   text="Immunizations">
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="450.0" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Immunizations">
                                                    <font>
                                                       <Font size="26.0" />
                                                    </font>
                                                 </Text>
-                                                <HBox alignment="CENTER_RIGHT" prefHeight="35.0"
-                                                   prefWidth="450.0">
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="450.0">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity"
-                                                         onMouseClicked="#updateImmunization"
-                                                         prefWidth="112.0"
-                                                         style="-fx-background-color: #1771ff; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#updateImmunization" prefWidth="112.0" style="-fx-background-color: #1771ff; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
                                                          <children>
-                                                            <Text strokeType="OUTSIDE"
-                                                               strokeWidth="0.0" text="Save">
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Save">
                                                                <HBox.margin>
                                                                   <Insets left="5.0" right="5.0" />
                                                                </HBox.margin>
@@ -428,21 +338,16 @@
                                                 </HBox>
                                              </children>
                                           </HBox>
-                                          <ScrollPane prefHeight="600.0" prefWidth="1200.0"
-                                             style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
+                                          <ScrollPane prefHeight="600.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0"
-                                                   prefWidth="1175.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1175.0">
                                                    <children>
-                                                      <VBox fx:id="immunizationsBox"
-                                                         prefWidth="1176.0">
+                                                      <VBox fx:id="immunizationsBox" prefWidth="1176.0">
                                                          <padding>
-                                                            <Insets bottom="15.0" left="15.0"
-                                                               right="15.0" top="15.0" />
+                                                            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                                                          </padding>
                                                          <children>
-                                                            <TextArea fx:id="immunizations"
-                                                               prefHeight="390.0" prefWidth="1146.0" />
+                                                            <TextArea fx:id="immunizations" prefHeight="390.0" prefWidth="1146.0" />
                                                          </children>
                                                       </VBox>
                                                    </children>
@@ -463,28 +368,22 @@
                         </Tab>
                         <Tab closable="false" text="Ask Your Doctor">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                                 prefWidth="200.0">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <VBox alignment="TOP_CENTER" prefHeight="497.0"
-                                       prefWidth="1220.0">
+                                    <VBox alignment="TOP_CENTER" prefHeight="497.0" prefWidth="1220.0">
                                        <children>
-                                          <HBox alignment="TOP_CENTER" prefHeight="37.0"
-                                             prefWidth="1200.0">
+                                          <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="1200.0">
                                              <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0"
-                                                   text="Ask Your Doctor">
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ask Your Doctor">
                                                    <font>
                                                       <Font size="26.0" />
                                                    </font>
                                                 </Text>
                                              </children>
                                           </HBox>
-                                          <ScrollPane prefHeight="379.0" prefWidth="1200.0"
-                                             style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-radius: 8px; -fx-background-radius: 8px;">
+                                          <ScrollPane prefHeight="379.0" prefWidth="1200.0" style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0"
-                                                   prefWidth="1190.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="1190.0">
                                                    <children>
                                                       <VBox fx:id="MessageBox" prefWidth="1176.0" />
                                                    </children>
@@ -493,8 +392,7 @@
                                           </ScrollPane>
                                           <HBox>
                                              <children>
-                                                <TextField fx:id="messageField" prefHeight="53.0"
-                                                   prefWidth="1010.0">
+                                                <TextField fx:id="messageField" prefHeight="53.0" prefWidth="1010.0">
                                                    <font>
                                                       <Font size="19.0" />
                                                    </font>
@@ -502,19 +400,13 @@
                                                       <Insets left="2.0" top="10.0" />
                                                    </HBox.margin>
                                                 </TextField>
-                                                <HBox alignment="CENTER_RIGHT" prefHeight="63.0"
-                                                   prefWidth="179.0">
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="63.0" prefWidth="179.0">
                                                    <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity"
-                                                         onMouseClicked="#sendMessage"
-                                                         prefWidth="134.0"
-                                                         style="-fx-background-color: #1771ff; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: HAND;">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#sendMessage" prefWidth="134.0" style="-fx-background-color: #1771ff; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: HAND;">
                                                          <children>
-                                                            <Text strokeType="OUTSIDE"
-                                                               strokeWidth="0.0" text="Send Message">
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Send Message">
                                                                <HBox.margin>
-                                                                  <Insets bottom="5.0" left="10.0"
-                                                                     right="10.0" top="5.0" />
+                                                                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                                                                </HBox.margin>
                                                                <font>
                                                                   <Font size="21.0" />
