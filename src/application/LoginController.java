@@ -43,8 +43,8 @@ public class LoginController {
         error_msg.setText("");
 
         if (type.equals("Patient")) {
-            Main.setRoot("PatientView");
             Main.id = ID;
+            Main.setRoot("PatientView");
             return;
         }
 
