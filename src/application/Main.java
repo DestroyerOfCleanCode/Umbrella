@@ -15,31 +15,25 @@ import javafx.stage.StageStyle;
 
 public class Main extends Application {
 	
-    private static Scene scene;
-    private static double xOffset, yOffset;
+	private static Scene scene;
+    private static Stage stage;
+
+    public static double xOffset, yOffset;
+
+    static int id;
 
     static Connection connection = null;
     static Statement stmt = null;
-    
-    static int id;
 	
 	@Override
-	public void start(Stage stage) {
+	public void start(Stage mainStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("fxml/Login.fxml"));
 			scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 			
-			// This allows window to be dragged
-	        root.setOnMousePressed(event -> {
-	            xOffset = stage.getX() - event.getScreenX();
-	            yOffset = stage.getY() - event.getScreenY();
-	        });
-
-	        root.setOnMouseDragged(event -> {
-	            stage.setX(event.getScreenX() + xOffset);
-	            stage.setY(event.getScreenY() + yOffset);
-	        });
+			stage = mainStage;
+			Helper.makeDraggable(root, stage);
 			
 	     // This disable window border and buttons
 	        scene.setFill(Color.TRANSPARENT);
@@ -59,6 +53,7 @@ public class Main extends Application {
 	
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
+        Helper.makeDraggable(scene.getRoot(), stage);
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

@@ -6,10 +6,25 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
 
 public class Helper {
     public static void exit() {
         System.exit(0);
+    }
+    
+    public static void makeDraggable(Parent root, Stage stage) {
+        // This allows window to be dragged
+        root.setOnMousePressed(event -> {
+            Main.xOffset = stage.getX() - event.getScreenX();
+            Main.yOffset = stage.getY() - event.getScreenY();
+        });
+
+        root.setOnMouseDragged(event -> {
+            stage.setX(event.getScreenX() + Main.xOffset);
+            stage.setY(event.getScreenY() + Main.yOffset);
+        });
     }
 
     public static int authenticate(String username, String password) throws SQLException {
