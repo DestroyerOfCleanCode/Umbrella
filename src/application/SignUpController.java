@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -59,10 +58,7 @@ public class SignUpController {
             return;
         }
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String formattedDate = dob.format(formatter);
-
-        Helper.createPatientAccount(username, confirmPassword, firstName, lastName, formattedDate);
+        Helper.createPatientAccount(username, confirmPassword, firstName, lastName, Helper.dateConvert(dob));
 
         HBox button_root = (HBox) signup_btn.getParent();
         Button goBack_btn = (Button) button_root.getChildren().get(1);

@@ -62,7 +62,7 @@
                            <children>
                               <HBox alignment="CENTER" maxHeight="-Infinity"
                                  onMouseClicked="#logout" prefHeight="50.0" prefWidth="134.0"
-                                 style="-fx-background-color: #d7d7d9; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
+                                 styleClass="border_btn">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
                                        <HBox.margin>
@@ -409,7 +409,7 @@
                                                    prefWidth="450.0">
                                                    <children>
                                                       <HBox alignment="CENTER" maxHeight="-Infinity"
-                                                         onMouseClicked="#addNewVaccine"
+                                                         onMouseClicked="#updateImmunization"
                                                          prefWidth="112.0"
                                                          style="-fx-background-color: #1771ff; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
                                                          <children>
@@ -442,7 +442,7 @@
                                                          </padding>
                                                          <children>
                                                             <TextArea fx:id="immunizations"
-                                                               prefHeight="200.0" prefWidth="1175.0" />
+                                                               prefHeight="390.0" prefWidth="1146.0" />
                                                          </children>
                                                       </VBox>
                                                    </children>

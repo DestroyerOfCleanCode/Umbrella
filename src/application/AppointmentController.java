@@ -1,10 +1,12 @@
 package application;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.time.LocalDate;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 public class AppointmentController {
@@ -12,67 +14,55 @@ public class AppointmentController {
 	private Text greeting;
 	@FXML
 	private Text patientName;
-	
 	@FXML
-	private TextField heightField;
-	@FXML
-	private TextField weightField;
-	@FXML
-	private TextField bodyTempField;
-	@FXML
-	private TextField bpHiField;
-	@FXML
-	private TextField bpLoField;
+	private DatePicker doa;
 	@FXML
 	private TextArea allergiesField;
 	@FXML
 	private TextArea healthConcernsField;
-	
+
 	@FXML
 	private TextArea physicalResultsField;
-	
+
 	@FXML
 	private TextArea doctorConcernsField;
 	@FXML
 	private TextArea prescriptionsField;
-	
+
+	public void initialize() throws SQLException {
+		Patient patient = Helper.fetchPatientData(Main.patientID);
+		greeting.setText(Helper.greetingEmployee(Main.employeeID));
+		patientName.setText(patient.getFirstName() + " " + patient.getLastName());
+	}
+
 	@FXML
-    private void logout() throws IOException {
-        Main.setRoot("Login");
-        Main.id = 0;
-    }
-	
+	private void logout() throws IOException {
+		Main.employeeID = -1;
+		Main.patientID = -1;
+		Main.setRoot("Login");
+	}
+
 	@FXML
-    private void goback() throws IOException {
-		String height = heightField.getText();
-		String weight = weightField.getText();
-		String bodyTemp = bodyTempField.getText();
-		String bpHi = bpHiField.getText();
-		String bpLo = bpLoField.getText();
+	private void goback() throws IOException, SQLException {
+		LocalDate date = doa.getValue();
 		String allergies = allergiesField.getText();
 		String healthConcerns = healthConcernsField.getText();
-		String eyes = physicalResultsField.getText();
+		String physExam = physicalResultsField.getText();
 		String doctorConcerns = doctorConcernsField.getText();
 		String prescriptions = prescriptionsField.getText();
-		System.out.println(height + ", " + weight + ", " + bodyTemp + ", " + bpHi + ", " + bpLo + ", " +
-				 allergies + ", " + healthConcerns + ", " + eyes + ", " + doctorConcerns + ", " + prescriptions);
-        Main.setRoot("ExistingPatientsPage");
-    }
-	
+
+		if (date == null) {
+			return;
+		}
+
+		Helper.createAppointment(date, Main.patientID, Main.employeeID, allergies, healthConcerns, physExam,
+				doctorConcerns, prescriptions);
+
+		Main.setRoot("ExistingPatientsPage");
+	}
+
 	@FXML
-    private void endAppointment() throws IOException {
-		String height = heightField.getText();
-		String weight = weightField.getText();
-		String bodyTemp = bodyTempField.getText();
-		String bpHi = bpHiField.getText();
-		String bpLo = bpLoField.getText();
-		String allergies = allergiesField.getText();
-		String healthConcerns = healthConcernsField.getText();
-		String eyes = physicalResultsField.getText();
-		String doctorConcerns = doctorConcernsField.getText();
-		String prescriptions = prescriptionsField.getText();
-		System.out.println(height + ", " + weight + ", " + bodyTemp + ", " + bpHi + ", " + bpLo + ", " +
-				 allergies + ", " + healthConcerns + ", " + eyes + ", " + doctorConcerns + ", " + prescriptions);
-        Main.setRoot("ExistingPatientsPage");
-    }
+	private void endAppointment() throws IOException {
+		Main.setRoot("ExistingPatientsPage");
+	}
 }

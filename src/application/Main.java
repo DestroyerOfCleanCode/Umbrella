@@ -15,12 +15,13 @@ import javafx.stage.StageStyle;
 
 public class Main extends Application {
 	
-	private static Scene scene;
+    private static Scene scene;
     private static Stage stage;
 
     public static double xOffset, yOffset;
 
-    static int id;
+    static int patientID;
+    static int employeeID;
 
     static Connection connection = null;
     static Statement stmt = null;
@@ -75,8 +76,13 @@ public class Main extends Application {
             query = "CREATE TABLE IF NOT EXISTS Patient (ID INTEGER PRIMARY KEY NOT NULL, firstName TEXT NOT NULL, lastName TEXT NOT NULL, dob DATE NOT NULL, phoneNumber TEXT, email TEXT, address TEXT, insuranceNumber TEXT, pharmacyAddress TEXT, pharmacyPhoneNumber TEXT, weight REAL, height REAL, bodyTemp REAL, bloodPressureHi REAL, bloodPressureLo REAL, healthHistory TEXT, immunization TEXT);";
             stmt.executeUpdate(query);
 
-            query = "CREATE TABLE IF NOT EXISTS Employee (ID INTEGER PRIMARY KEY NOT NULL, FirstName TEXT NOT NULL, LastName TEXT, Type TEXT NOT NULL);";
+            query = "CREATE TABLE IF NOT EXISTS Employee (ID INTEGER PRIMARY KEY NOT NULL, FirstName TEXT NOT NULL, LastName TEXT);";
             stmt.executeUpdate(query);
+
+            query = "CREATE TABLE IF NOT EXISTS Appointment (ID INTEGER PRIMARY KEY AUTOINCREMENT, PatientID INTEGER NOT NULL, DoctorID INTEGER NOT NULL, Date DATE NOT NULL, Allergies TEXT, HealthConcern TEXT, PhysExam TEXT, DocConcern TEXT, Prescription TEXT);";
+            stmt.executeUpdate(query);
+
+//             Helper.createEmployeeAccount("miles", "123", "Miles", "", "Doctor");
 
             launch();
 

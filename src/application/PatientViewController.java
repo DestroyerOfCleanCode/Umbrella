@@ -32,10 +32,6 @@ public class PatientViewController {
 	private TextField pharmNumberField;
 
 	@FXML
-	private TextField vaccineField;
-	@FXML
-	private TextField vaccineDateField;
-	@FXML
 	private TextArea immunizations;
 
 	@FXML
@@ -44,10 +40,20 @@ public class PatientViewController {
 	@FXML
 	private TextField messageField;
 
+	private Patient patient;
+
 	@FXML
 	public void initialize() throws SQLException {
-		Patient patient = Helper.fetchPatientDataFromId(Main.id);
+		patient = Helper.fetchPatientData(Main.patientID);
 
+		if (patient == null) {
+			return;
+		}
+
+		populatePatientData();
+	}
+
+	private void populatePatientData() {
 		greeting.setText("Hello " + patient.getFirstName());
 		phoneNumberField.setText(patient.getPhoneNumber() == null ? "" : patient.getPhoneNumber());
 		emailField.setText(patient.getEmail() == null ? "" : patient.getEmail());
@@ -60,27 +66,59 @@ public class PatientViewController {
 
 	@FXML
 	private void logout() throws IOException {
-		Main.id = -1;
+		Main.patientID = -1;
 		Main.setRoot("Login");
 	}
 
 	@FXML
 	private void saveAdditionalInformation() throws IOException {
-		String phonenumber = phoneNumberField.getText();
+		String phoneNumber = phoneNumberField.getText();
 		String email = emailField.getText();
 		String address = addressField.getText();
 		String insuranceNumber = insuranceNumberField.getText();
 		String pharmAddress = pharmAddressField.getText();
 		String pharmNumber = pharmNumberField.getText();
-		System.out.println(phonenumber + ", " + email + ", " + address + ", " + insuranceNumber + ", "
-				+ pharmAddress + ", " + pharmNumber);
+
+		if (!phoneNumber.isBlank()) {
+			patient.setPhoneNumber(phoneNumber);
+		}
+
+		if (!email.isBlank()) {
+			patient.setEmail(email);
+		}
+
+		if (!address.isBlank()) {
+			patient.setAddress(address);
+		}
+
+		if (!insuranceNumber.isBlank()) {
+			patient.setInsuranceNumber(insuranceNumber);
+		}
+
+		if (!pharmAddress.isBlank()) {
+			patient.setPharmacyAddress(pharmAddress);
+		}
+
+		if (!pharmNumber.isBlank()) {
+			patient.setPharmacyPhoneNumber(pharmNumber);
+		}
+
+		if (!phoneNumber.isBlank() || !email.isBlank() || !address.isBlank() || !insuranceNumber.isBlank()
+				|| !pharmAddress.isBlank() || !pharmNumber.isBlank()) {
+			if (Helper.updatePatientData(patient)) {
+				populatePatientData();
+			}
+		}
 	}
 
 	@FXML
-	private void addNewVaccine() throws IOException {
-		String vaccine = vaccineField.getText();
-		String vaccineDate = vaccineDateField.getText();
-		System.out.println(vaccine + ", " + vaccineDate);
+	private void updateImmunization() throws IOException {
+		String imm = immunizations.getText();
+		patient.setImmunization(imm);
+
+		if (Helper.updatePatientData(patient)) {
+			populatePatientData();
+		}
 	}
 
 	@FXML

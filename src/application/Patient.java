@@ -37,7 +37,7 @@ public class Patient {
         this.insuranceNumber = parseString(insuranceNumber);
         this.pharmacyAddress = parseString(pharmacyAddress);
         this.pharmacyPhoneNumber = parseString(pharmacyPhoneNumber);
-        this.weight = weight; // No need to parse Double types, nulls are acceptable
+        this.weight = weight;
         this.height = height;
         this.bodyTemp = bodyTemp;
         this.bloodPressureHi = bloodPressureHi;
@@ -190,7 +190,7 @@ public class Patient {
     // toString method for debugging
     @Override
     public String toString() {
-        return "Patient{" +
+        return "Patient {" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

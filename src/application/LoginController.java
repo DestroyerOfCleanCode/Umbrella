@@ -43,11 +43,12 @@ public class LoginController {
         error_msg.setText("");
 
         if (type.equals("Patient")) {
-            Main.id = ID;
+            Main.patientID = ID;
             Main.setRoot("PatientView");
             return;
         }
 
+        Main.employeeID = ID;
         Main.setRoot("OfficeMenuPage");
     }
 

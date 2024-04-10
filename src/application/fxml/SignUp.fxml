@@ -14,20 +14,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom right, rgba(26, 65, 183, 1) 0%, rgba(0, 169, 223, 1) 74%); -fx-background-radius: 32px; -fx-border-radius: 32px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+    prefHeight="720.0" prefWidth="1280.0"
+    style="-fx-background-color: linear-gradient(to bottom right, rgba(26, 65, 183, 1) 0%, rgba(0, 169, 223, 1) 74%); -fx-background-radius: 32px; -fx-border-radius: 32px;"
+    xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="application.SignUpController">
     <children>
         <BorderPane prefHeight="200.0" prefWidth="200.0">
             <top>
-                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="27.0" BorderPane.alignment="TOP_LEFT">
+                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="27.0" prefWidth="27.0"
+                    BorderPane.alignment="TOP_LEFT">
                     <BorderPane.margin>
                         <Insets left="30.0" top="30.0" />
                     </BorderPane.margin>
                     <children>
-                  <HBox fx:id="exit_btn" onMouseClicked="#exit">
-                     <children>
-                                <SVGPath content="M25.27,21.73c0.98,0.98,0.98,2.56,0,3.54C24.78,25.75,24.14,26,23.5,26s-1.28-0.24-1.77-0.73L13,16.53l-8.73,8.73 C3.78,25.75,3.14,26,2.5,26s-1.28-0.24-1.77-0.73c-0.98-0.98-0.98-2.56,0-3.54L9.46,13L0.73,4.27c-0.98-0.98-0.98-2.56,0-3.54 c0.98-0.98,2.56-0.98,3.54,0L13,9.46l8.73-8.73c0.98-0.98,2.56-0.98,3.54,0c0.98,0.98,0.98,2.56,0,3.54L16.53,13L25.27,21.73zM25.27,21.73c0.98,0.98,0.98,2.56,0,3.54C24.78,25.75,24.14,26,23.5,26s-1.28-0.24-1.77-0.73L13,16.53l-8.73,8.73 C3.78,25.75,3.14,26,2.5,26s-1.28-0.24-1.77-0.73c-0.98-0.98-0.98-2.56,0-3.54L9.46,13L0.73,4.27c-0.98-0.98-0.98-2.56,0-3.54 c0.98-0.98,2.56-0.98,3.54,0L13,9.46l8.73-8.73c0.98-0.98,2.56-0.98,3.54,0c0.98,0.98,0.98,2.56,0,3.54L16.53,13L25.27,21.73z" fill="WHITE" />
-                     </children>
-                  </HBox>
+                        <HBox fx:id="exit_btn" onMouseClicked="#exit">
+                            <children>
+                                <SVGPath
+                                    content="M25.27,21.73c0.98,0.98,0.98,2.56,0,3.54C24.78,25.75,24.14,26,23.5,26s-1.28-0.24-1.77-0.73L13,16.53l-8.73,8.73 C3.78,25.75,3.14,26,2.5,26s-1.28-0.24-1.77-0.73c-0.98-0.98-0.98-2.56,0-3.54L9.46,13L0.73,4.27c-0.98-0.98-0.98-2.56,0-3.54 c0.98-0.98,2.56-0.98,3.54,0L13,9.46l8.73-8.73c0.98-0.98,2.56-0.98,3.54,0c0.98,0.98,0.98,2.56,0,3.54L16.53,13L25.27,21.73zM25.27,21.73c0.98,0.98,0.98,2.56,0,3.54C24.78,25.75,24.14,26,23.5,26s-1.28-0.24-1.77-0.73L13,16.53l-8.73,8.73 C3.78,25.75,3.14,26,2.5,26s-1.28-0.24-1.77-0.73c-0.98-0.98-0.98-2.56,0-3.54L9.46,13L0.73,4.27c-0.98-0.98-0.98-2.56,0-3.54 c0.98-0.98,2.56-0.98,3.54,0L13,9.46l8.73-8.73c0.98-0.98,2.56-0.98,3.54,0c0.98,0.98,0.98,2.56,0,3.54L16.53,13L25.27,21.73z"
+                                    fill="WHITE" />
+                            </children>
+                        </HBox>
                     </children>
                 </VBox>
             </top>
@@ -40,20 +48,22 @@
                             </image>
                         </ImageView>
                     </children>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
                 </VBox>
             </bottom>
         </BorderPane>
-        <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 24;">
+        <VBox alignment="CENTER" spacing="20.0"
+            style="-fx-background-color: white; -fx-background-radius: 24;">
             <children>
                 <VBox alignment="TOP_CENTER">
                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Get Started" textAlignment="CENTER" wrappingWidth="320.772705078125">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Get Started"
+                            textAlignment="CENTER" wrappingWidth="320.772705078125">
                             <font>
                                 <Font name="SF Pro Rounded Semibold" size="38.0" />
                             </font>
@@ -67,37 +77,48 @@
                     <children>
                         <HBox prefWidth="200.0">
                             <children>
-                                <TextField fx:id="firstName_field" prefHeight="45.0" prefWidth="206.0" promptText="First Name" styleClass="text_field">
+                                <TextField fx:id="firstName_field" prefHeight="45.0"
+                                    prefWidth="206.0" promptText="First Name"
+                                    styleClass="text_field">
                                     <HBox.margin>
                                         <Insets right="20.0" />
                                     </HBox.margin>
                                 </TextField>
-                                <TextField fx:id="lastName_field" prefHeight="45.0" prefWidth="206.0" promptText="Last Name" styleClass="text_field" />
+                                <TextField fx:id="lastName_field" prefHeight="45.0"
+                                    prefWidth="206.0" promptText="Last Name" styleClass="text_field" />
                             </children>
                         </HBox>
-                  <DatePicker fx:id="dob_field" prefHeight="46.0" prefWidth="419.2" promptText="Date of Birth" styleClass="date_picker" />
-                        <TextField fx:id="username_field" prefHeight="45.0" promptText="Username" styleClass="text_field" />
-                        <PasswordField fx:id="password_field" prefHeight="45.0" promptText="Password" styleClass="text_field" />
-                        <PasswordField fx:id="confirmPassword_field" prefHeight="45.0" promptText="Confirm Password" styleClass="text_field" />
+                        <DatePicker fx:id="dob_field" prefHeight="46.0" prefWidth="419.2"
+                            promptText="Date of Birth" styleClass="date_picker" />
+                        <TextField fx:id="username_field" prefHeight="45.0" promptText="Username"
+                            styleClass="text_field" />
+                        <PasswordField fx:id="password_field" prefHeight="45.0"
+                            promptText="Password" styleClass="text_field" />
+                        <PasswordField fx:id="confirmPassword_field" prefHeight="45.0"
+                            promptText="Confirm Password" styleClass="text_field" />
                     </children>
                 </VBox>
-            <HBox alignment="CENTER_LEFT">
-               <children>
-                  <Text fx:id="error_msg" fill="#f80759" strokeType="OUTSIDE" strokeWidth="0.0">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Text fx:id="error_msg" fill="#f80759" strokeType="OUTSIDE"
+                            strokeWidth="0.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
                 <HBox alignment="CENTER" prefHeight="45.6" prefWidth="413.6" spacing="60.0">
                     <children>
-                        <Button fx:id="signup_btn" defaultButton="true" mnemonicParsing="false" onAction="#signUp" prefHeight="45.0" prefWidth="180.0" styleClass="fill_btn" text="Create Account">
+                        <Button fx:id="signup_btn" defaultButton="true" mnemonicParsing="false"
+                            onAction="#signUp" prefHeight="45.0" prefWidth="180.0"
+                            styleClass="fill_btn" text="Create Account">
                             <font>
                                 <Font name="SF Pro Rounded Medium" size="15.0" />
                             </font>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Go Back">
+                        <Button mnemonicParsing="false" onAction="#login" prefHeight="45.0"
+                            prefWidth="180.0" styleClass="border_btn" text="Go Back">
                             <font>
                                 <Font name="SF Pro Rounded Medium" size="15.0" />
                             </font>
