@@ -3,7 +3,6 @@ package application;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import javafx.scene.Parent;
@@ -13,7 +12,7 @@ public class Helper {
     public static void exit() {
         System.exit(0);
     }
-    
+
     public static void makeDraggable(Parent root, Stage stage) {
         // This allows window to be dragged
         root.setOnMousePressed(event -> {
@@ -53,28 +52,32 @@ public class Helper {
         return null;
     }
 
-    public static ArrayList<String> fetchPatientDataFromId(int ID) throws SQLException {
+    public static Patient fetchPatientDataFromId(int ID) throws SQLException {
         ResultSet rs = Main.stmt.executeQuery("SELECT * FROM Patient WHERE ID = " + ID + ";");
 
         if (rs.next()) {
-            ArrayList<String> data = new ArrayList<String>();
-            data.add(rs.getString("firstName"));
-            data.add(rs.getString("lastName"));
-            data.add(rs.getString("dob"));
-            data.add(rs.getString("phoneNumber"));
-            data.add(rs.getString("email"));
-            data.add(rs.getString("insuranceNumber"));
-            data.add(rs.getString("pharmacy"));
-            data.add(rs.getString("weight"));
-            data.add(rs.getString("height"));
-            data.add(rs.getString("bodyTemp"));
-            data.add(rs.getString("bloodPressureHi"));
-            data.add(rs.getString("bloodPressureLo"));
-            data.add(rs.getString("allergies"));
-            data.add(rs.getString("healthIssues"));
-            data.add(rs.getString("medications"));
+            Patient patient = new Patient(
+                    rs.getInt("ID"),
+                    rs.getString("firstName"),
+                    rs.getString("lastName"),
+                    rs.getString("dob"),
+                    rs.getString("phoneNumber"),
+                    rs.getString("email"),
+                    rs.getString("address"),
+                    rs.getString("insuranceNumber"),
+                    rs.getString("pharmacyAddress"),
+                    rs.getString("pharmacyPhoneNumber"),
+                    rs.getDouble("weight"),
+                    rs.getDouble("height"),
+                    rs.getDouble("bodyTemp"),
+                    rs.getDouble("bloodPressureHi"),
+                    rs.getDouble("bloodPressureLo"),
+                    rs.getString("healthHistory"),
+                    rs.getString("immunization"));
 
-            return data;
+            System.out.println(patient);
+
+            return patient;
         }
 
         return null;
@@ -93,12 +96,17 @@ public class Helper {
 
             System.out.println("Patient account inserted successfully.");
 
-            sql = "INSERT INTO Patient (firstName, lastName, dob, phoneNumber, email, insuranceNumber, pharmacy, weight, height, bodyTemp, bloodPressureHi, bloodPressureLo, allergies, healthIssues, medications) VALUES (?, ?, ?, NULL, '', '', '', NULL, NULL, NULL, NULL, NULL, '', '', '');";
+            sql = "SELECT ID FROM Account WHERE Username = '" + username + "';";
+            ResultSet rs = Main.stmt.executeQuery(sql);
+            int ID = rs.getInt("ID");
+
+            sql = "INSERT INTO Patient (ID, firstName, lastName, dob, phoneNumber, email, address, insuranceNumber, pharmacyAddress, pharmacyPhoneNumber, weight, height, bodyTemp, bloodPressureHi, bloodPressureLo, healthHistory, immunization) VALUES (?, ?, ?, ?, ?, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);";
 
             try (PreparedStatement pstmt_new = Main.connection.prepareStatement(sql)) {
-                pstmt_new.setString(1, firstName);
-                pstmt_new.setString(2, lastName);
-                pstmt_new.setString(3, dob);
+                pstmt_new.setInt(1, ID);
+                pstmt_new.setString(2, firstName);
+                pstmt_new.setString(3, lastName);
+                pstmt_new.setString(4, dob);
                 pstmt_new.executeUpdate();
 
                 System.out.println("Patient record inserted successfully.");

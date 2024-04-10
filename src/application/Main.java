@@ -72,7 +72,10 @@ public class Main extends Application {
             String query = "CREATE TABLE IF NOT EXISTS Account (ID INTEGER PRIMARY KEY AUTOINCREMENT, Username TEXT NOT NULL UNIQUE, Password TEXT NOT NULL, Type TEXT NOT NULL);";
             stmt.executeUpdate(query);
 
-            query = "CREATE TABLE IF NOT EXISTS Patient (ID INTEGER PRIMARY KEY AUTOINCREMENT, firstName TEXT NOT NULL, lastName TEXT NOT NULL, dob DATE NOT NULL, phoneNumber TEXT, email TEXT, insuranceNumber TEXT, pharmacy TEXT, weight REAL, height REAL, bodyTemp REAL, bloodPressureHi REAL, bloodPressureLo REAL, allergies TEXT, healthIssues TEXT, medications TEXT);";
+            query = "CREATE TABLE IF NOT EXISTS Patient (ID INTEGER PRIMARY KEY NOT NULL, firstName TEXT NOT NULL, lastName TEXT NOT NULL, dob DATE NOT NULL, phoneNumber TEXT, email TEXT, address TEXT, insuranceNumber TEXT, pharmacyAddress TEXT, pharmacyPhoneNumber TEXT, weight REAL, height REAL, bodyTemp REAL, bloodPressureHi REAL, bloodPressureLo REAL, healthHistory TEXT, immunization TEXT);";
+            stmt.executeUpdate(query);
+
+            query = "CREATE TABLE IF NOT EXISTS Employee (ID INTEGER PRIMARY KEY NOT NULL, FirstName TEXT NOT NULL, LastName TEXT, Type TEXT NOT NULL);";
             stmt.executeUpdate(query);
 
             launch();

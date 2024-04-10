@@ -2,7 +2,6 @@ package application;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
@@ -47,34 +46,16 @@ public class PatientViewController {
 
 	@FXML
 	public void initialize() throws SQLException {
-		ArrayList<String> data = Helper.fetchPatientDataFromId(Main.id);
+		Patient patient = Helper.fetchPatientDataFromId(Main.id);
 
-		String firstName = data.get(0);
-		String lastName = data.get(1);
-		String dob = data.get(2);
-		String phoneNumber = data.get(3);
-		String email = data.get(4);
-		String address = data.get(5);
-		String insuranceNumber = data.get(6);
-		String pharmacyAddress = data.get(7);
-		String pharmacyPhoneNumber = data.get(8);
-		String weight = data.get(9);
-		String height = data.get(10);
-		String bodyTemp = data.get(11);
-		String bloodPressureHi = data.get(12);
-		String bloodPressureLo = data.get(13);
-		String healthHistory = data.get(14);
-		String immunization = data.get(15);
-
-		greeting.setText("Hello " + firstName + " " + lastName);
-		phoneNumberField.setText(phoneNumber);
-		emailField.setText(email);
-		addressField.setText(address);
-		insuranceNumberField.setText(insuranceNumber);
-		pharmAddressField.setText(pharmacyAddress);
-		pharmNumberField.setText(pharmacyPhoneNumber);
-		immunizations.setText(immunization);
-		
+		greeting.setText("Hello " + patient.getFirstName());
+		phoneNumberField.setText(patient.getPhoneNumber() == null ? "" : patient.getPhoneNumber());
+		emailField.setText(patient.getEmail() == null ? "" : patient.getEmail());
+		addressField.setText(patient.getAddress() == null ? "" : patient.getAddress());
+		insuranceNumberField.setText(patient.getInsuranceNumber() == null ? "" : patient.getInsuranceNumber());
+		pharmAddressField.setText(patient.getPharmacyAddress() == null ? "" : patient.getPharmacyAddress());
+		pharmNumberField.setText(patient.getPharmacyPhoneNumber() == null ? "" : patient.getPharmacyPhoneNumber());
+		immunizations.setText(patient.getImmunization() == null ? "" : patient.getImmunization());
 	}
 
 	@FXML
