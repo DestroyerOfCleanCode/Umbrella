@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -36,7 +37,7 @@ public class PatientViewController {
 	@FXML
 	private TextField vaccineDateField;
 	@FXML
-	private VBox immunizationsBox;
+	private TextArea immunizations;
 
 	@FXML
 	private VBox MessageBox;
@@ -53,18 +54,27 @@ public class PatientViewController {
 		String dob = data.get(2);
 		String phoneNumber = data.get(3);
 		String email = data.get(4);
-		String insuranceNumber = data.get(5);
-		String pharmacy = data.get(6);
-		String weight = data.get(7);
-		String height = data.get(8);
-		String bodyTemp = data.get(9);
-		String bloodPressureHi = data.get(10);
-		String bloodPressureLo = data.get(11);
-		String allergies = data.get(12);
-		String healthIssues = data.get(13);
-		String medications = data.get(14);
+		String address = data.get(5);
+		String insuranceNumber = data.get(6);
+		String pharmacyAddress = data.get(7);
+		String pharmacyPhoneNumber = data.get(8);
+		String weight = data.get(9);
+		String height = data.get(10);
+		String bodyTemp = data.get(11);
+		String bloodPressureHi = data.get(12);
+		String bloodPressureLo = data.get(13);
+		String healthHistory = data.get(14);
+		String immunization = data.get(15);
 
-		greeting.setText("Hello " + firstName);
+		greeting.setText("Hello " + firstName + " " + lastName);
+		phoneNumberField.setText(phoneNumber);
+		emailField.setText(email);
+		addressField.setText(address);
+		insuranceNumberField.setText(insuranceNumber);
+		pharmAddressField.setText(pharmacyAddress);
+		pharmNumberField.setText(pharmacyPhoneNumber);
+		immunizations.setText(immunization);
+		
 	}
 
 	@FXML

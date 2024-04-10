@@ -205,7 +205,7 @@
                                                                         </Text>
                                                                      </children>
                                                                   </HBox>
-                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sex:" wrappingWidth="160.501953125">
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Body Temp:" wrappingWidth="160.501953125">
                                                                      <font>
                                                                         <Font size="21.0" />
                                                                      </font>
@@ -215,7 +215,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="129.0">
                                                                      <children>
-                                                                        <Text fx:id="sex" strokeType="OUTSIDE" strokeWidth="0.0" text="M">
+                                                                        <Text fx:id="bodyTemp" strokeType="OUTSIDE" strokeWidth="0.0" text="98">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>
@@ -229,7 +229,7 @@
                                                                   </Text>
                                                                   <HBox prefHeight="31.0" prefWidth="129.0">
                                                                      <children>
-                                                                        <Text fx:id="weight" strokeType="OUTSIDE" strokeWidth="0.0" text="70">
+                                                                        <Text fx:id="weight" strokeType="OUTSIDE" strokeWidth="0.0" text="70 lbs">
                                                                            <font>
                                                                               <Font size="21.0" />
                                                                            </font>

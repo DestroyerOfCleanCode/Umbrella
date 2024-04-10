@@ -321,46 +321,11 @@
                                                       <Font size="26.0" />
                                                    </font>
                                                 </Text>
-                                             </children>
-                                          </HBox>
-                                          <HBox prefHeight="47.0" prefWidth="1152.0">
-                                             <children>
-                                                <HBox alignment="CENTER">
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="187.0">
                                                    <children>
-                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vaccine:" wrappingWidth="89.501953125">
-                                                         <font>
-                                                            <Font size="21.0" />
-                                                         </font>
-                                                      </Text>
-                                                      <TextField fx:id="vaccineField" prefHeight="31.0" prefWidth="235.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </TextField>
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER">
-                                                   <children>
-                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Administered:" wrappingWidth="186.501953125">
-                                                         <font>
-                                                            <Font size="21.0" />
-                                                         </font>
-                                                         <HBox.margin>
-                                                            <Insets left="30.0" />
-                                                         </HBox.margin>
-                                                      </Text>
-                                                      <TextField fx:id="vaccineDateField" prefHeight="31.0" prefWidth="235.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </TextField>
-                                                   </children>
-                                                </HBox>
-                                                <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="373.0">
-                                                   <children>
-                                                      <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#addNewVaccine" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #1771ff; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
+                                                      <HBox alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#addNewVaccine" prefWidth="112.0" style="-fx-background-color: #1771ff; -fx-background-radius: 16px; -fx-border-radius: 16px; -fx-cursor: HAND;">
                                                          <children>
-                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add New">
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Save">
                                                                <HBox.margin>
                                                                   <Insets left="5.0" right="5.0" />
                                                                </HBox.margin>
@@ -373,6 +338,8 @@
                                                    </children>
                                                 </HBox>
                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="34.0" prefWidth="1200.0">
                                              <padding>
                                                 <Insets bottom="15.0" top="10.0" />
                                              </padding>

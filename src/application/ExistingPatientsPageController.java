@@ -20,7 +20,7 @@ public class ExistingPatientsPageController {
 	@FXML
 	private Text dob;
 	@FXML
-	private Text sex;
+	private Text bodyTemp;
 	@FXML
 	private Text bloodpressure;
 	@FXML
