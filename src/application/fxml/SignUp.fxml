@@ -53,7 +53,7 @@
             <children>
                 <VBox alignment="TOP_CENTER">
                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Get Started" wrappingWidth="276.772705078125">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Let's Get Started" textAlignment="CENTER" wrappingWidth="320.772705078125">
                             <font>
                                 <Font name="SF Pro Rounded Semibold" size="38.0" />
                             </font>
@@ -92,14 +92,14 @@
             </HBox>
                 <HBox alignment="CENTER" prefHeight="45.6" prefWidth="413.6" spacing="60.0">
                     <children>
-                        <Button defaultButton="true" mnemonicParsing="false" onAction="#signUp" prefHeight="45.0" prefWidth="180.0" styleClass="fill_btn" text="Create Account">
+                        <Button fx:id="signup_btn" defaultButton="true" mnemonicParsing="false" onAction="#signUp" prefHeight="45.0" prefWidth="180.0" styleClass="fill_btn" text="Create Account">
                             <font>
                                 <Font name="SF Pro Rounded Medium" size="15.0" />
                             </font>
                         </Button>
                         <Button mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Go Back">
                             <font>
-                                <Font name="SF Pro Rounded Regular" size="15.0" />
+                                <Font name="SF Pro Rounded Medium" size="15.0" />
                             </font>
                         </Button>
                     </children>

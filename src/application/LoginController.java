@@ -1,6 +1,7 @@
 package application;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -22,7 +23,7 @@ public class LoginController {
     }
 
     @FXML
-    private void login() throws IOException {
+    private void login() throws SQLException, IOException {
         String username = username_field.getText();
         String password = password_field.getText();
 
@@ -31,14 +32,23 @@ public class LoginController {
             return;
         }
 
-        if (Helper.BCryptAuth(password, Helper.BCryptHash("123"))) {
-            error_msg.setText("Login successful");
-            
-            if (username.equalsIgnoreCase("patient"))
-            	Main.setRoot("PatientView");
-            if (username.equalsIgnoreCase("doctor") || username.equalsIgnoreCase("nurse"))
-            	Main.setRoot("OfficeMenuPage");
+        int ID = Helper.authenticate(username, password);
+
+        if (ID == -1) {
+            error_msg.setText("Incorrect username or password");
+            return;
         }
+
+        String type = Helper.fetchTypeFromId(ID);
+        error_msg.setText("");
+
+        if (type.equals("Patient")) {
+            Main.setRoot("PatientView");
+            Main.id = ID;
+            return;
+        }
+
+        Main.setRoot("OfficeMenuPage");
     }
 
     @FXML

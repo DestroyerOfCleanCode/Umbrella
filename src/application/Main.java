@@ -2,19 +2,26 @@ package application;
 
 import java.io.IOException;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
-import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 	
     private static Scene scene;
     private static double xOffset, yOffset;
-    public static int id;
+
+    static Connection connection = null;
+    static Statement stmt = null;
+    
+    static int id;
 	
 	@Override
 	public void start(Stage stage) {
@@ -60,7 +67,27 @@ public class Main extends Application {
     }
 
 	public static void main(String[] args) {
-		launch(args);
+		try {
+            Class.forName("org.sqlite.JDBC");
+            connection = DriverManager.getConnection("jdbc:sqlite:test.db");
+            System.out.println("Opened database successfully");
+
+            stmt = connection.createStatement();
+
+            String query = "CREATE TABLE IF NOT EXISTS Account (ID INTEGER PRIMARY KEY AUTOINCREMENT, Username TEXT NOT NULL UNIQUE, Password TEXT NOT NULL, Type TEXT NOT NULL);";
+            stmt.executeUpdate(query);
+
+            query = "CREATE TABLE IF NOT EXISTS Patient (ID INTEGER PRIMARY KEY AUTOINCREMENT, firstName TEXT NOT NULL, lastName TEXT NOT NULL, dob DATE NOT NULL, phoneNumber TEXT, email TEXT, insuranceNumber TEXT, pharmacy TEXT, weight REAL, height REAL, bodyTemp REAL, bloodPressureHi REAL, bloodPressureLo REAL, allergies TEXT, healthIssues TEXT, medications TEXT);";
+            stmt.executeUpdate(query);
+
+            launch();
+
+            stmt.close();
+            connection.close();
+        } catch (Exception e) {
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            System.exit(0);
+        }
 	}
 	
 }

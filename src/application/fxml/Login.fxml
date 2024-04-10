@@ -94,7 +94,7 @@
                         </Button>
                         <Button mnemonicParsing="false" onAction="#signUp" prefHeight="45.0" prefWidth="180.0" styleClass="border_btn" text="Sign up">
                             <font>
-                                <Font name="SF Pro Rounded Regular" size="15.0" />
+                                <Font name="SF Pro Rounded Medium" size="15.0" />
                             </font>
                         </Button>
                     </children>
