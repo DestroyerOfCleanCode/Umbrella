@@ -85,8 +85,6 @@ public class Main extends Application {
             query = "CREATE TABLE IF NOT EXISTS Message (ID INTEGER PRIMARY KEY AUTOINCREMENT, PatientID INTEGER NOT NULL, DoctorID INTEGER, Date DATETIME NOT NULL, Content TEXT);";
             stmt.executeUpdate(query);
 
-//             Helper.createEmployeeAccount("doctor", "123", "Johnny", "Sins", "Doctor");
-
             launch();
 
             stmt.close();
