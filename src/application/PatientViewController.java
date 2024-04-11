@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 public class PatientViewController {
@@ -35,7 +34,7 @@ public class PatientViewController {
 	private TextArea pastAppointments;
 
 	@FXML
-	private VBox MessageBox;
+	private TextArea MessageBox;
 
 	@FXML
 	private TextField messageField;
@@ -63,6 +62,7 @@ public class PatientViewController {
 		pharmNumberField.setText(patient.getPharmacyPhoneNumber() == null ? "" : patient.getPharmacyPhoneNumber());
 		immunizations.setText(patient.getImmunization() == null ? "" : patient.getImmunization());
 		pastAppointments.setText(Helper.appointmentsAsString(patient.getId()));
+		MessageBox.setText(Helper.messagesAsString(patient.getId()));
 	}
 
 	@FXML
@@ -123,8 +123,14 @@ public class PatientViewController {
 	}
 
 	@FXML
-	private void sendMessage() throws IOException {
+	private void sendMessage() throws IOException, SQLException {
 		String message = messageField.getText();
-		System.out.println(message);
+		if (message.isBlank()) {
+			return;
+		}
+
+		messageField.clear();
+		Helper.sendMessage(patient.getId(), message);
+		MessageBox.setText(Helper.messagesAsString(patient.getId()));
 	}
 }

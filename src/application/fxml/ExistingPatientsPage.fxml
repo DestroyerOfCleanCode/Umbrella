@@ -752,8 +752,8 @@
                                           <ScrollPane prefHeight="325.0" prefWidth="1200.0"
                                              style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-radius: 8px; -fx-background-radius: 8px;">
                                              <content>
-                                                <TextArea fx:id="MessageBox" prefHeight="320.0"
-                                                   prefWidth="1192.0" />
+                                                <TextArea fx:id="MessageBox" editable="false"
+                                                   prefHeight="320.0" prefWidth="1192.0" />
                                              </content>
                                           </ScrollPane>
                                           <HBox>

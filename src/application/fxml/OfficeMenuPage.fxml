@@ -155,28 +155,6 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="400.0">
-                     <children>
-                        <HBox alignment="CENTER" maxHeight="-Infinity"
-                           onMouseClicked="#viewMessages" prefHeight="50.0" prefWidth="134.0"
-                           styleClass="fill_btn">
-                           <children>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0"
-                                 text="View Questions Received">
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="28.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                           <HBox.margin>
-                              <Insets top="10.0" />
-                           </HBox.margin>
-                        </HBox>
-                     </children>
-                  </HBox>
                </children>
             </VBox>
          </children>

@@ -62,10 +62,10 @@ public class Main extends Application {
         return fxmlLoader.load();
     }
 
-	public static void main(String[] args) {
-		try {
+    public static void main(String[] args) {
+        try {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:test.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:production.db");
             System.out.println("Opened database successfully");
 
             stmt = connection.createStatement();
@@ -82,7 +82,10 @@ public class Main extends Application {
             query = "CREATE TABLE IF NOT EXISTS Appointment (ID INTEGER PRIMARY KEY AUTOINCREMENT, PatientID INTEGER NOT NULL, DoctorID INTEGER NOT NULL, Date DATE NOT NULL, Allergies TEXT, HealthConcern TEXT, PhysExam TEXT, DocConcern TEXT, Prescription TEXT);";
             stmt.executeUpdate(query);
 
-//             Helper.createEmployeeAccount("miles", "123", "Miles", "", "Doctor");
+            query = "CREATE TABLE IF NOT EXISTS Message (ID INTEGER PRIMARY KEY AUTOINCREMENT, PatientID INTEGER NOT NULL, DoctorID INTEGER, Date DATETIME NOT NULL, Content TEXT);";
+            stmt.executeUpdate(query);
+
+//             Helper.createEmployeeAccount("doctor", "123", "Johnny", "Sins", "Doctor");
 
             launch();
 
@@ -92,6 +95,6 @@ public class Main extends Application {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
-	}
+    }
 	
 }

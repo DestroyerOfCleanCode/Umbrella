@@ -93,6 +93,7 @@ public class ExistingPatientsPageController {
 		healthHistoryBox.setText(patient.getHealthHistory());
 		immunizationsBox.setText(patient.getImmunization());
 		pastAppointmentsBox.setText(Helper.appointmentsAsString(patient.getId()));
+		MessageBox.setText(Helper.messagesAsString(patient.getId()));
 	}
 
 	@FXML
@@ -157,16 +158,20 @@ public class ExistingPatientsPageController {
 	}
 
 	@FXML
-	private void sendMessage() throws IOException {
+	private void sendMessage() throws IOException, SQLException {
 		String message = messageField.getText();
-		System.out.print(message);
+
+		if (message.isBlank()) {
+			return;
+		}
+
+		messageField.clear();
+		Helper.sendMessage(patient.getId(), Main.employeeID, message);
+		MessageBox.setText(Helper.messagesAsString(patient.getId()));
 	}
 
 	@FXML
 	private void appointment() throws IOException {
 		Main.setRoot("AppointmentPage");
-	}
-
-	private void addMessage(String string) throws IOException {
 	}
 }

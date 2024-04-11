@@ -30,9 +30,4 @@ public class OfficeMenuController {
     private void existingPatient() throws IOException {
         Main.setRoot("FindPatientPage");
     }
-
-    @FXML
-    private void viewMessages() throws IOException {
-        Main.setRoot("OfficeMessagingPage");
-    }
 }

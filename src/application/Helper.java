@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -372,6 +373,80 @@ public class Helper {
                     + "\nHealth Concerns: " + appointment.getHealthConcern() + "\nPhysical Exam: "
                     + appointment.getPhysExam() + "\nDoctor's Concerns: " + appointment.getDocConcern()
                     + "\nPrescription: " + appointment.getPrescription() + "\n\n";
+        }
+
+        return str;
+    }
+
+    private static boolean insertMessage(int patientID, int doctorID, LocalDateTime date, String content)
+            throws SQLException {
+        String sql = "INSERT INTO Message (PatientID, DoctorID, Date, Content) VALUES (?, ?, ?, ?)";
+
+        try (PreparedStatement pstmt = Main.connection.prepareStatement(sql)) {
+            pstmt.setInt(1, patientID);
+            pstmt.setInt(2, doctorID);
+            pstmt.setString(3, date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+            pstmt.setString(4, content);
+
+            int affectedRows = pstmt.executeUpdate();
+            if (affectedRows > 0) {
+                return true;
+            }
+        } catch (SQLException e) {
+            System.out.println("Error inserting message: " + e.getMessage());
+        }
+
+        return false;
+    }
+
+    public static boolean sendMessage(int patientID, String content) throws SQLException {
+        return insertMessage(patientID, -1, LocalDateTime.now(), content);
+    }
+
+    public static boolean sendMessage(int patientID, int doctorID, String content) throws SQLException {
+        return insertMessage(patientID, doctorID, LocalDateTime.now(), content);
+    }
+
+    public static ArrayList<Message> fetchMessagesByPatientID(int patientID) throws SQLException {
+        String sql = "SELECT * FROM Message WHERE PatientID = ? ORDER BY Date ASC";
+
+        ArrayList<Message> messages = new ArrayList<>();
+
+        try (PreparedStatement pstmt = Main.connection.prepareStatement(sql)) {
+            pstmt.setInt(1, patientID);
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    Message message = new Message(
+                            rs.getInt("ID"),
+                            rs.getInt("PatientID"),
+                            rs.getInt("DoctorID"),
+                            LocalDateTime.parse(rs.getString("Date"),
+                                    DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")),
+                            rs.getString("Content"));
+
+                    messages.add(message);
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error fetching messages: " + e.getMessage());
+        }
+
+        return messages;
+    }
+
+    public static String messagesAsString(int patientID) throws SQLException {
+        ArrayList<Message> messages = fetchMessagesByPatientID(patientID);
+        String patientName = Helper.fetchPatientData(patientID).getFirstName();
+        String str = "";
+
+        for (Message message : messages) {
+            if (message.getDoctorID() == -1) {
+                str += patientName + ": " + message.getContent() + "\n";
+            } else {
+                str += "Doctor " + Helper.fetchEmployeeById(message.getDoctorID()).getFirstName() + ": "
+                        + message.getContent() + "\n";
+            }
         }
 
         return str;
